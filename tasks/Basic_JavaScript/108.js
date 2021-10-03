@@ -1,13 +1,19 @@
-//Use Multiple Conditional (Ternary) Operators
+//Use Recursion to Create a Countdown
 
-function checkSign(a) {
-    return a > 0 ? "positive"
-        : a < 0 ? "negative"
-            : "zero";
+// Only change code below this line
+function countdown(n) {
+    if (n < 1) {
+        return [];
+    } else {
+        const arr = countdown(n - 1);
+        arr.splice(0, 0, n);
+        console.log(arr);
+        return arr;
+    }
 }
+// Only change code above this line
 
-checkSign(-12);
-console.log(checkSign(-12))
+
 
 
 
