@@ -1,8 +1,7 @@
 /*
-Match All Non-Numbers
+Restrict Possible Usernames
  */
 
-let movieName = "2001: A Space Odyssey";
-let noNumRegex = /\D/g; // Change this line
-let result = movieName.match(noNumRegex).length;
-console.log(result) //17
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+let result = userCheck.test(username);
