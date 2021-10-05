@@ -1,7 +1,7 @@
 /*
-Restrict Possible Usernames
+Match All Letters and Numbers
  */
 
-let username = "JackOfAllTrades";
-let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
-let result = userCheck.test(username);
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/gi; // Change this line
+let result = quoteSample.match(alphabetRegexV2);
