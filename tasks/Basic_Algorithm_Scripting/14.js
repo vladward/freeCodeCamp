@@ -1,9 +1,14 @@
 /*
-Where do I Belong
+Mutations
 */
 
-function getIndexToIns(arr, num) {
-    return arr.filter(i => num > i).length;
+function mutation(arr) {
+    let test = arr[1].toLowerCase();
+    let target = arr[0].toLowerCase();
+    for (let i = 0; i < test.length; i++) {
+        if (target.indexOf(test[i]) < 0) return false;
+    }
+    return true;
 }
 
-console.log(getIndexToIns([40, 60], 50));
+console.log(mutation(["hello", "hey"]));
